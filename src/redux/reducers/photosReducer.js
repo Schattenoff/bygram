@@ -29,10 +29,9 @@ export const photosReducer = (state = initialState, action) => {
         ...state, 
         totalPhotos: action.payload
       };
-    default: {
+    default: 
       return {
         ...state
       }
-    }
   }
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_ENDPOINT = 'http://localhost:3000';
+const API_ENDPOINT = 'https://server-bygram.herokuapp.com';
 
 export const makeRequest = (config) => {
   config.url = `${API_ENDPOINT}${config.url}`;

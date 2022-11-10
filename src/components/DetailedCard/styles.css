@@ -46,12 +46,24 @@
 }
 
 .cnDetailedCardLikeIcon {
+  font-size: 25px;
   margin-right: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cnDetailedCardLikeIcon:hover {
+  opacity: 0.8;
 }
 
 .cnDetailedCardCommentIcon {
+  font-size: 25px;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cnDetailedCardCommentIcon {
+  opacity: 0.8;
 }
 
 .cnDetailedCardOpenComments {
