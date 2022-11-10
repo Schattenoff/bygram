@@ -1,0 +1,66 @@
+.cnDetailedCardRoot {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 2px 4px rgba(0,0,0, .2);
+}
+
+.cnDetailedCardHeader {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 20px;
+  background-color: #fff;
+}
+
+.cnDetailedCardImg {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cnDetailedCardButtons {
+  display: flex;
+  padding: 10px;
+}
+
+.cnDetailedCardLikes {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.cnDetailedCardComments {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px 10px;
+}
+
+.cnDetailedCardTextArea {
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  outline: none;
+  resize: none;
+}
+
+.cnDetailedCardLikeIcon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.cnDetailedCardCommentIcon {
+  cursor: pointer;
+}
+
+.cnDetailedCardOpenComments {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.cnDetailedCardOpenComments:hover {
+  opacity: 1;
+}
