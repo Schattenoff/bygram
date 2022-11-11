@@ -1,12 +1,37 @@
-import { Provider } from 'react-redux';
-import PageRoutes from './components/PageRoutes/PageRoutes';
-import { store } from './redux/store';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage/MainPage';
+import UserPage from './pages/UserPage/UserPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
 
 const App = () => {
   return (
-    <Provider store={store}>
-            <PageRoutes />
-    </Provider>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <PrivateRoute>
+                <MainPage />
+              </PrivateRoute>}
+          />
+          <Route
+            path='/user/:nickname'
+            loader={({ params }) => {
+            }}
+            action={({ params }) => { }}
+            element={
+              <PrivateRoute>
+                <UserPage />
+              </PrivateRoute>
+            }
+          />
+          <Route path='*' element={<NotFoundPage />} exact />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 

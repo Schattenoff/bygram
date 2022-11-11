@@ -7,29 +7,29 @@ const initialState = {
 }
 
 export const photosReducer = (state = initialState, action) => {
-  switch(action.type) {
-    case GET_PHOTOS.STARTED: 
+  switch (action.type) {
+    case GET_PHOTOS.STARTED:
       return {
-        ...state, 
+        ...state,
         isPhotosLoading: true,
       };
-    case GET_PHOTOS.FAILED: 
+    case GET_PHOTOS.FAILED:
       return {
-        ...state, 
+        ...state,
         isPhotosLoading: false,
       };
-    case GET_PHOTOS.SUCCESS: 
+    case GET_PHOTOS.SUCCESS:
       return {
-        ...state, 
-      photos: action.payload,
-      isPhotosLoading: false,
+        ...state,
+        photos: action.payload,
+        isPhotosLoading: false,
       };
-    case SET_PHOTOS.TOTAL: 
+    case SET_PHOTOS.TOTAL:
       return {
-        ...state, 
+        ...state,
         totalPhotos: action.payload
       };
-    default: 
+    default:
       return {
         ...state
       }

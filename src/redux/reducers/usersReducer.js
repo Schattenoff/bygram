@@ -1,36 +1,36 @@
 import { GET_USERS } from "../actionCreators/users"
 
 const initialState = {
-  user: {},
-  isUserLoading: false,
+  user: undefined,
+  isUserLoading: true,
   authorizedUser: undefined,
 }
 
 export const usersReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_USERS.STARTED: 
+    case GET_USERS.STARTED:
       return {
-        ...state, 
+        ...state,
         isUserLoading: true,
       };
-    case GET_USERS.FAILED: 
+    case GET_USERS.FAILED:
       return {
-        ...state, 
+        ...state,
         isUserLoading: false,
       };
-    case GET_USERS.SUCCESS: 
+    case GET_USERS.SUCCESS:
       return {
-        ...state, 
+        ...state,
         user: action.payload,
         isUserLoading: false,
       };
-    case GET_USERS.AUTHORIZED_SUCCESS: 
+    case GET_USERS.AUTHORIZED_SUCCESS:
       return {
-        ...state, 
+        ...state,
         authorizedUser: action.payload,
         isUserLoading: false,
       };
-    default: 
+    default:
       return {
         ...state
       }

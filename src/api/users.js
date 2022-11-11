@@ -2,8 +2,8 @@ import { makeRequest } from "./makeRequest";
 
 const URL = '/users';
 
-export const getUsers = (userId, config) => makeRequest({
+export const getUsers = (config) => makeRequest({
   method: 'GET',
-  url: `${URL}/${userId}`,
+  url: URL,
   ...config,
 })
